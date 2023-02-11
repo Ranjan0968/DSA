@@ -4,14 +4,29 @@
     <title>Array_Traversing</title>
     <script>
         let data = [2,3,7,9,10,20,30,25,45,78,98,67];
-        for(let i=0;i<data.length;i++)
-        {
-            document.write(data[i]);
-            console.log(data[i]);
+        // for(let i=0;i<data.length;i++)
+        // {
+        //     document.write(` Array  ${i} is ${data[i]} <br>`);
+        
+        // }
+        const getElement=()=>{
+            const el = document.getElementById('element').value;
+            if (el<data.length && typeof parseInt(el)==="number")
+            {
+                alert(data[el]);
+            }
+            else{
+                alert("Please enter valid Input")
+            }
+            
+           
         }
+       
     </script>
 </head>
 <body>
+    <input type="text" id="element"/>
+    <button onclick="getElement()">Click</button>
     
 </body>
 </html>
